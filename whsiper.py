@@ -3,16 +3,19 @@ import sys
 import os
 from pydub import AudioSegment
 import whisper
+import torch
 
-os.chdir(r" ")   # Change this 
+devices = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-dest_dir = (r"  ") # Change this too
+os.chdir(r" ") # Change this
+
+dest_dir = (r" ") # Change this
 
 d_list = (os.listdir())
 
-model = whisper.load_model("base")
+model = whisper.load_model("base", device =devices)
 
-f = open("test.txt", 'w')
+f = open("test.txt", 'w', encoding='utf-8')
 
 for file in d_list:
 
