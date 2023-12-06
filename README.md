@@ -1,5 +1,5 @@
 # Open AI .Wav file Transcriber
-Batch .Wav file transcriber. Ideally used for transcribing PC-game dialogue
+Batch .Wav file transcriber.
 
 Requires installation of whisper from Open-AI
 
